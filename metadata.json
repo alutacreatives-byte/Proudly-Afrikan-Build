@@ -1,0 +1,6 @@
+{
+  "name": "Proudly Afrikan Build",
+  "description": "An African learning platform where you can study anything. Build lessons, worksheets, exams, presentations and complete learning experiences for any subject.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

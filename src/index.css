@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F3ECE2;
+    color: #181716;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Unbounded', 'Syne', 'Space Grotesk', system-ui, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'IBM Plex Mono', 'Space Mono', monospace;
+}
+
+/* --- 3D CLAYMORPHIC / TACTILE STYLING (MATCHING REFERENCE) --- */
+
+/* 3D Tray Layered Stack (Exact multi-plate look in reference screenshot) */
+.clay-tray-outer {
+  position: relative;
+  border-radius: 36px;
+  background: #EAE0D2;
+  box-shadow: 
+    0 24px 48px -8px rgba(150, 130, 110, 0.38),
+    0 10px 20px -4px rgba(0, 0, 0, 0.04),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(140, 120, 100, 0.18);
+  padding: 12px;
+}
+
+.clay-tray-mid {
+  position: relative;
+  border-radius: 30px;
+  background: #F4ECE0;
+  box-shadow: 
+    0 10px 20px -4px rgba(160, 140, 120, 0.22),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 3px rgba(140, 120, 100, 0.12);
+  padding: 10px;
+}
+
+/* 3D Main Card Surface */
+.clay-card-3d {
+  background: linear-gradient(180deg, #FAF7F2 0%, #F5EEE4 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 14px 30px -4px rgba(160, 140, 120, 0.28),
+    0 4px 10px rgba(0, 0, 0, 0.03),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(170, 150, 130, 0.2);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-card-3d-interactive {
+  background: linear-gradient(180deg, #FCFAF6 0%, #F5ECE0 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 12px 24px -4px rgba(160, 140, 120, 0.24),
+    0 3px 8px rgba(0, 0, 0, 0.03),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(170, 150, 130, 0.18);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-card-3d-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 18px 36px -4px rgba(150, 130, 110, 0.32),
+    0 6px 14px rgba(0, 0, 0, 0.05),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(170, 150, 130, 0.25);
+}
+
+/* 3D Tactile Pill Button (Exact match to reference screenshot) */
+.clay-pill-3d {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5EFE7 100%);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 5px 12px -2px rgba(165, 145, 125, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(180, 160, 140, 0.25);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-pill-3d:hover {
+  transform: translateY(-1.5px) scale(1.01);
+  box-shadow: 
+    0 8px 16px -2px rgba(155, 135, 115, 0.42),
+    0 3px 6px rgba(0, 0, 0, 0.06),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(180, 160, 140, 0.2);
+}
+
+.clay-pill-3d:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 
+    0 2px 4px rgba(165, 145, 125, 0.3),
+    inset 0 2px 3px rgba(160, 140, 120, 0.25);
+}
+
+/* 3D Crimson Action Button */
+.clay-btn-crimson {
+  background: linear-gradient(180deg, #E6425E 0%, #C92A45 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 6px 16px -2px rgba(201, 42, 69, 0.45),
+    0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 3px rgba(130, 15, 30, 0.4);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-crimson:hover {
+  transform: translateY(-1.5px) scale(1.02);
+  box-shadow: 
+    0 10px 22px -2px rgba(201, 42, 69, 0.55),
+    0 4px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 3px rgba(130, 15, 30, 0.35);
+}
+
+.clay-btn-crimson:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 
+    0 2px 6px rgba(201, 42, 69, 0.4),
+    inset 0 2px 4px rgba(130, 15, 30, 0.5);
+}
+
+/* 3D Dark Carbon Button */
+.clay-btn-dark {
+  background: linear-gradient(180deg, #2E2B2A 0%, #181716 100%);
+  color: #FAF7F0;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 5px 14px -2px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.25),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-dark:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 
+    0 8px 18px -2px rgba(0, 0, 0, 0.45),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.3);
+}
+
+.clay-btn-dark:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* 3D Floating Nav Bar */
+.clay-navbar {
+  background: linear-gradient(180deg, rgba(253, 251, 248, 0.92) 0%, rgba(246, 240, 232, 0.92) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  box-shadow: 
+    0 16px 36px -6px rgba(160, 140, 120, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.03),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(180, 160, 140, 0.18);
+}
+
+/* 3D Form Input / Inset Fields */
+.clay-input {
+  background: #FFFFFF;
+  border: 1px solid rgba(215, 200, 185, 0.9);
+  border-radius: 14px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(255, 255, 255, 0.8);
+  color: #181716;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.clay-input:focus {
+  outline: none;
+  border-color: #D63651;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04), 0 0 0 3px rgba(214, 54, 81, 0.15);
+}
